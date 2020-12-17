@@ -10,12 +10,10 @@ const userSchema = new Schema({
     },
     origanization : {
         type : String,
-        required : true,
         trim : true
     },
     designation : {
         type : String,
-        required : true,
         trim : true
     },
     password : {

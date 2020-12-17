@@ -13,8 +13,8 @@ const registerUserValidation = ( data ) => {
 
 const loginUserValidation = ( data ) => {
     const schema = Joi.object({
-        username : Joi.string().min(3).required().email(),
-        password : Joi.string().min(8).required()
+        username : Joi.string().min(3).required(),
+        password : Joi.string().required()
     })
     return schema.validate(data)
 }

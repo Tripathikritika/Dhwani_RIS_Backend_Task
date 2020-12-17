@@ -40,15 +40,15 @@ const loginUser = async( req, res )=> {
     if( error ) {
         return res.status(400).send(error.details[0].message)
     }
-    
+
     const username = await Users.findOne({username : req.body.username})
 
     if( !username ) {
         return res.status(400).send("Username is wrong")
     }
 
-    const validatePassword = await bcrypt.compare(req.body.password , username.password)
-    if(!validatePassword){
+    const hashedPassword = await bcrypt.compare(req.body.password , username.password)
+    if(!hashedPassword){
         return res.status(400).send("Invalid Password")
     }
     const userLoginDetails = new Users({

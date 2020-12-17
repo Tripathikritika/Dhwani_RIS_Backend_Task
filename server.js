@@ -2,7 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const cors = require('cors')
-
+const User = require('./models/Users')
+const route = require('./routes/routers')
 const app = express()
 
 dotenv.config()
@@ -22,6 +23,7 @@ mongoose.connect(
     }
 )
 
+app.use('/' ,route)
 app.listen( 8000 , () => {
     console.log("Server is up and running successfully at port 8000")
 })
