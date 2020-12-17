@@ -15,4 +15,5 @@ router.post('/statename',postStateNames)
 router.get('/districtname',getDistrictName)
 router.post('/districtname',postDistrictName)
 
+
 module.exports = router
