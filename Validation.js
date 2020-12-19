@@ -1,6 +1,6 @@
 const Joi = require('joi')
-const { schema } = require('./models/Users')
 
+//Validate the user before Registration
 const registerUserValidation = ( data ) => {
     const schema = Joi.object({
         username :  Joi.string().min(3).required(),
@@ -11,6 +11,7 @@ const registerUserValidation = ( data ) => {
     return schema.validate(data)
 }
 
+//Validate the user before Login
 const loginUserValidation = ( data ) => {
     const schema = Joi.object({
         username : Joi.string().min(3).required(),
