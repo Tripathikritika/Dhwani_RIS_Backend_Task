@@ -39,6 +39,8 @@
 
 > -  Create a file .env and you need to provide your own mongo credentials to connect to a database and a Secret Key. 
 
+#### Postman Collection Url : https://www.postman.com/collections/93585102d9a35115ad6f
+
 
 ## Credits
 
