@@ -37,6 +37,9 @@
 
 > `nodemon server.js`
 
+> -  Create a file .env and you need to provide your own mongo credentials to connect to a database and a Secret Key. 
+
+
 ## Credits
 
 `https://dhwaniris.in/`
